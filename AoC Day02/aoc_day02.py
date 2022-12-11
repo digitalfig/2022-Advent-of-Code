@@ -11,7 +11,7 @@ def import_file( test ):
 	return [l.replace(" ", "") for l in lines]
 
 lines = import_file("T")
-print(lines)
+#print(lines)
 
 def score_it(lines, score_array):
 	score = 0
@@ -23,9 +23,9 @@ def score_it(lines, score_array):
 #Rock    =  A, X  =  1
 #Paper   =  B, Y  =  2
 #Sissors =  C, Z  =  3
-#win =  ["AY": 6 + 2, "BZ": 6 + 3, "CX": 6 + 1]
-#draw = ["AX": 3 + 1, "BY": 3 + 2, "CZ": 3 + 3]
-#lose = ["AZ": 0 + 3, "BX": 0 + 1, "CY": 0 + 2]
+#win =  {"AY": 6 + 2, "BZ": 6 + 3, "CX": 6 + 1}
+#draw = {"AX": 3 + 1, "BY": 3 + 2, "CZ": 3 + 3}
+#lose = {"AZ": 0 + 3, "BX": 0 + 1, "CY": 0 + 2}
 score_array = ["BX", "CY", "AZ", "AX", "BY", "CZ", "CX", "AY", "BZ"]
 score = score_it(lines, score_array)
 print("Score Part 1:", score)
@@ -37,5 +37,3 @@ print("Score Part 1:", score)
 score_array = ["BX", "CX", "AX", "AY", "BY", "CY", "CZ", "AZ", "BZ"]
 score = score_it(lines, score_array)
 print("Score Part 2:", score)
-
-
