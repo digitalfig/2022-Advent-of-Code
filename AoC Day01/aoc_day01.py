@@ -1,8 +1,10 @@
 ## Advent of Code 2022 -- Day 01:
-## Day 1: Calorie Counting
+'''Day 1: Calorie Counting
 
-## READ FILE:
+Elves carry various food items of different calories. The input file lists the calories per food item on each line and blank lines seperate groups for each elf's carried food supply.
+'''
 
+## READ INPUT FILE:
 def import_file( test ):
 	if test.upper() == 'TEST':
 		fn = 'test.txt'
@@ -16,8 +18,7 @@ lines = import_file("I")
 #print(lines)
 
 
-## PART 1 ------------ :
-
+'''Part 1: How many calories is the elf with the most calories hold?'''
 elf_calories = [0]
 elf_index = 0
 for l in lines:
@@ -29,8 +30,7 @@ for l in lines:
 print("Max calories held:", max(elf_calories))
 
 
-## PART 2 ------------ :
-
+'''Part 2: Total the top 3 elf calorie holders together.'''
 elf_calories.sort(reverse = True)
 #print(elf_calories)
 top3 = elf_calories[0] + elf_calories[1] + elf_calories[2]
